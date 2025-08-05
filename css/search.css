@@ -1,0 +1,14 @@
+.btn-map {
+  display: inline-block;
+  margin-left: .5rem;
+  padding: .5rem 1rem;
+  border: 1px solid #007bff;
+  background: #fff;
+  color: #007bff;
+  border-radius: .375rem;
+  cursor: pointer;
+  transition: background .2s;
+}
+.btn-map:hover {
+  background: #e6f0ff;
+}
