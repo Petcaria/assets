@@ -577,3 +577,33 @@ body {
   font-size: 1rem;
   color: var(--text-light);
 }
+
+/* ==== Sección centralizada para especialistas ==== */
+.specialist-cta {
+  background: var(--background-alt);
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.specialist-cta .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.specialist-cta h2 {
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.specialist-cta p {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+}
+
+.specialist-cta .btn-registro {
+  /* ya llevas estilo definido, pero centrémoslo */
+  display: inline-block;
+  margin: 0 auto;
+}
