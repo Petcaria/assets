@@ -1,26 +1,147 @@
+/* assets/css/pets.css */
+
+/* Variables globales (si no están ya en main.css) */
+:root {
+  --primary: #17B26A;
+  --primary-dark: #149655;
+  --background: #FFFFFF;
+  --text: #1A2942;
+  --text-light: #4A5567;
+  --card-bg: #FFFFFF;
+  --shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Grid de mascotas */
+.pets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Card de mascota */
+.pet-card {
+  background: var(--card-bg);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.pet-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+.pet-card h3 {
+  margin: 0 0 .5rem;
+  color: var(--text);
+}
+.pet-card p {
+  margin: .25rem 0;
+  color: var(--text-light);
+}
+.pet-card .btn-group {
+  margin-top: 1rem;
+}
+
+/* Botones */
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background .2s, transform .2s;
+}
+.btn-primary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+.btn-agendar {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background .2s, color .2s;
+}
+.btn-agendar:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
 /* Modal overlay */
 .modal-overlay {
-  position: fixed; top:0; left:0; width:100%; height:100%;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   background: rgba(0,0,0,0.5);
-  display: none; align-items:center; justify-content:center;
+  display: none;
+  align-items: center;
+  justify-content: center;
   z-index: 1000;
 }
 .modal-overlay.active {
   display: flex;
 }
+
+/* Modal content */
 .modal-content {
-  background: #fff; max-width: 400px; padding: 2rem;
-  border-radius: 1rem; position: relative;
+  background: var(--background);
+  max-width: 400px;
+  width: 90%;
+  padding: 2rem;
+  border-radius: 1rem;
+  position: relative;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
 }
+.modal-content img {
+  width: 120px;
+  margin-bottom: 1rem;
+}
+.modal-content h2 {
+  margin: .5rem 0;
+  color: var(--text);
+}
+.modal-content p {
+  color: var(--text-light);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+/* Close button */
 .modal-close {
-  position: absolute; top: .5rem; right: .75rem;
-  background: none; border: none; font-size: 1.5rem; cursor: pointer;
+  position: absolute;
+  top: .5rem; right: .75rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-light);
 }
+.modal-close:hover {
+  color: var(--text);
+}
+
+/* Link estilo texto */
 .text-link {
   color: var(--primary);
   text-decoration: none;
 }
 .text-link:hover {
   text-decoration: underline;
+}
+
+/* Responsive Ajustes */
+@media (max-width: 768px) {
+  .pets-grid {
+    grid-template-columns: 1fr;
+  }
+  .modal-content {
+    padding: 1.5rem;
+  }
 }
