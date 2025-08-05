@@ -145,3 +145,33 @@
     padding: 1.5rem;
   }
 }
+
+/* botón “Historial médico” distinto */
+.btn-history {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .5rem 1rem;
+  background-color: #0069d9;
+  color: #fff;
+  border: none;
+  border-radius: .375rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color .2s;
+}
+
+.btn-history:hover {
+  background-color: #0056b3;
+}
+
+.btn-history .icon-history {
+  stroke: #fff;
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Opcional: si quieres que destaque aún más */
+.pet-card .btn-group .btn-history {
+  margin-top: .5rem;
+}
