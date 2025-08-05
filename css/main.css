@@ -98,11 +98,12 @@ body {
   border-radius: 10px;
   font-weight: 600;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
-
 .btn-primary:hover {
   background: var(--primary-dark);
   transform: translateY(-1px);
+  text-decoration: none;
 }
 
 /* Hero Section Mejorado */
