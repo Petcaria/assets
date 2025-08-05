@@ -1,0 +1,58 @@
+/* mail_thankyou.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #EEEEEE;
+}
+table.container {
+  max-width: 550px;
+  min-width: 320px;
+  width: 100%;
+  background-color: #FFFFFF;
+  border: 1px solid #DDDDDD;
+}
+.header {
+  padding: 20px 0;
+  text-align: center;
+}
+.logo {
+  display: block;
+  width: 200px;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+.divider {
+  border-top: 2px solid #E74C3C;
+}
+.content {
+  padding: 30px;
+  font-family: Arial, sans-serif;
+  color: #333333;
+  line-height: 1.5;
+}
+.title-box {
+  border: 1px solid #000;
+  padding: 15px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 auto 20px auto;
+  max-width: 400px;
+}
+.intro {
+  margin: 0 0 15px 0;
+  font-style: italic;
+}
+.highlight {
+  text-decoration: underline;
+}
+.footer {
+  padding: 20px;
+  font-size: 12px;
+  color: #999999;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
