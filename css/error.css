@@ -1,0 +1,73 @@
+/* assets/css/error.css */
+
+:root {
+  --primary: #17B26A;
+  --text: #1A2942;
+  --text-light: #4A5567;
+  --background-alt: #F8FAFC;
+}
+
+.error-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  text-align: center;
+  background: var(--background-alt);
+  padding: 2rem;
+}
+
+.error-page h1 {
+  font-size: clamp(3rem, 8vw, 6rem);
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.error-page p {
+  font-size: 1.25rem;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+}
+
+.error-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.error-actions a {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.error-actions .btn-primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.error-actions .btn-primary:hover {
+  background: #149655;
+  transform: translateY(-2px);
+}
+
+.error-actions .btn-secondary {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+.error-actions .btn-secondary:hover {
+  background: var(--primary-light);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .error-page h1 { font-size: 4rem; }
+  .error-page p  { font-size: 1.1rem; }
+}
