@@ -3,56 +3,87 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #EEEEEE;
+  background-color: #F2F6F8;
 }
 table.container {
-  max-width: 550px;
+  max-width: 600px;
   min-width: 320px;
   width: 100%;
   background-color: #FFFFFF;
-  border: 1px solid #DDDDDD;
+  border: 1px solid #E0E4E8;
+  /* barra superior gruesa */
+  border-top: 6px solid #009688;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
+
+/* HEADER */
 .header {
-  padding: 20px 0;
-  text-align: center;
+  padding: 20px;
+  text-align: center;     /* logo centrado */
+  background: #FFFFFF;
 }
 .logo {
   display: block;
-  width: 200px;
-  border: none;
-  outline: none;
-  text-decoration: none;
+  margin: 0 auto;         /* extra centrar */
+  width: 180px;
+  height: auto;
 }
+
+/* LÍNEA ROJA REEMPLAZADA POR DÉLAGADO DE COLOR MARCA */
 .divider {
-  border-top: 2px solid #E74C3C;
+  height: 2px;
+  background: #E53935;    /* rojo vivo, puedes ajustar */
+  margin: 0;
 }
+
+/* CONTENIDO */
 .content {
-  padding: 30px;
-  font-family: Arial, sans-serif;
+  padding: 30px 40px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
   color: #333333;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 .title-box {
-  border: 1px solid #000;
+  border: 2px solid #009688;  
+  background: linear-gradient(90deg, #00968810, #4DB6AC10);
   padding: 15px;
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: bold;
   letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
-  margin: 0 auto 20px auto;
-  max-width: 400px;
+  margin: 0 auto 25px auto;
+  max-width: 420px;
+  border-radius: 2px;
 }
 .intro {
-  margin: 0 0 15px 0;
+  margin: 0 0 20px 0;
   font-style: italic;
+  color: #555555;
 }
 .highlight {
   text-decoration: underline;
+  color: #009688;
 }
+
+/* ENLACES */
+a {
+  color: #009688;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
 .footer {
-  padding: 20px;
+  padding: 15px 0;
   font-size: 12px;
   color: #999999;
   text-align: center;
   font-family: Arial, sans-serif;
+  background: #F9FBFC;
+  border-top: 1px solid #E0E4E8;
 }
