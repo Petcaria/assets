@@ -1,101 +1,78 @@
+/* loader.css */
+
+/* 1. Importa la misma fuente que tu web */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
 :root {
   --light-brown: #be9b7b;
   --dark-brown: #4b3832;
 }
 
-.container {
-  font-family: "Londrina Solid", cursive;
+/* 2. Contenedor full-screen del loader */
+#page-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--background-alt, #F8FAFC);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
-  height: 100vh;
+  z-index: 9999;
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
-.title {
+/* 3. Título */
+#page-loader .title {
   font-size: 2.2em;
+  margin-bottom: 1rem;
+  color: var(--text, #1A2942);
 }
 
-.loader {
+/* 4. Wrapper de la animación */
+#page-loader .loader {
   position: relative;
   width: 250px;
   height: 50px;
 }
 
-.icon {
+/* 5. Iconos de pata */
+#page-loader .icon {
   position: absolute;
+  font-size: 2rem;
 }
 
+/* 6. Animaciones */
 @keyframes move-left-paw {
-  0% {
-    left: 0%;
-    opacity: 0;
-  }
-  15% {
-    left: 25%;
-    opacity: 1;
-    color: var(--dark-brown);
-  }
-  25% {
-    left: 25%;
-    opacity: 0;
-  }
-  50% {
-    left: 75%;
-    opacity: 1;
-    color: var(--light-brown);
-  }
-  75% {
-    left: 75%;
-    opacity: 0;
-  }
-  100% {
-    left: 100%;
-    opacity: 0;
-  }
+  0%   { left: 0%;    opacity: 0; }
+  15%  { left: 25%;   opacity: 1; color: var(--dark-brown); }
+  25%  { left: 25%;   opacity: 0; }
+  50%  { left: 75%;   opacity: 1; color: var(--light-brown); }
+  75%  { left: 75%;   opacity: 0; }
+  100% { left: 100%;  opacity: 0; }
 }
 
 @keyframes move-right-paw {
-  0% {
-    left: 15%;
-    opacity: 1;
-    color: var(--light-brown);
-  }
-  15% {
-    left: 15%;
-    opacity: 0;
-  }
-  25% {
-    left: 50%;
-    opacity: 1;
-    color: var(--dark-brown);
-  }
-  50% {
-    left: 50%;
-    opacity: 0;
-  }
-  75% {
-    left: 100%;
-    opacity: 1;
-    color: var(--light-brown);
-  }
-  100% {
-    left: 100%;
-    opacity: 0;
-  }
+  0%   { left: 15%;   opacity: 1; color: var(--light-brown); }
+  15%  { left: 15%;   opacity: 0; }
+  25%  { left: 50%;   opacity: 1; color: var(--dark-brown); }
+  50%  { left: 50%;   opacity: 0; }
+  75%  { left: 100%;  opacity: 1; color: var(--light-brown); }
+  100% { left: 100%;  opacity: 0; }
 }
 
-.left-paw {
-  color: var(--dark-brown);
+/* 7. Estilos para cada pata */
+#page-loader .left-paw {
   animation: move-left-paw 3.2s ease infinite;
-  left: 0;
   transform: rotate(75deg);
+  color: var(--dark-brown);
 }
 
-.right-paw {
-  transform: rotate(100deg);
+#page-loader .right-paw {
   top: 20px;
   animation: move-right-paw 3.2s ease infinite;
+  transform: rotate(100deg);
   color: var(--light-brown);
 }
