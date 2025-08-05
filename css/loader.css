@@ -1,81 +1,36 @@
-/* loader.css */
+/* templates/loader.css */
 
-/* 1. Importar la misma fuente de tu web y FontAwesome */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
-
-/* 2. Variables de color */
+/* Variables de color (ajusta si quieres otros) */
 :root {
-  --light-brown: #be9b7b;
-  --dark-brown: #4b3832;
-  --background-alt: #F8FAFC;   /* mism o valor que tu body */
-  --text-color: #1A2942;       /* igual que tu --text */
+  --loader-bg: #F8FAFC;       /* mismo fondo que tu web */
+  --loader-ring: #17B26A;     /* ejemplo en tu color primary */
+  --loader-ring-light: rgba(23,178,106,0.3);
 }
 
-/* 3. Overlay full-screen */
+/* Overlay full-screen */
 #page-loader {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;           /* cubrir todo el ancho */
-  height: 100vh;          /* cubrir todo el alto */
-  background: var(--background-alt);
+  inset: 0;                  /* top/right/bottom/left = 0 */
+  background: var(--loader-bg);
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 9999;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: inherit;      /* hereda la tuya */
 }
 
-/* 4. Título */
-#page-loader .title {
-  font-size: 2.2em;
-  margin-bottom: 1rem;
-  color: var(--text-color);
+/* El anillo giratorio */
+#page-loader .loader-ring {
+  width: 60px;
+  height: 60px;
+  border: 6px solid var(--loader-ring-light);
+  border-top-color: var(--loader-ring);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
 }
 
-/* 5. Contenedor de la animación */
-#page-loader .loader {
-  position: relative;
-  width: 250px;
-  height: 50px;
-}
-
-/* 6. Iconos de pata */
-#page-loader .icon {
-  position: absolute;
-  font-size: 2.5rem;    /* aumenta tamaño para visibilidad */
-  opacity: 0;
-}
-
-/* 7. Animaciones */
-@keyframes move-left-paw {
-  0%   { left: 0%;    opacity: 0; }
-  15%  { left: 25%;   opacity: 1; color: var(--dark-brown); }
-  25%  { left: 25%;   opacity: 0; }
-  50%  { left: 75%;   opacity: 1; color: var(--light-brown); }
-  75%  { left: 75%;   opacity: 0; }
-  100% { left: 100%;  opacity: 0; }
-}
-
-@keyframes move-right-paw {
-  0%   { left: 15%;   opacity: 1; color: var(--light-brown); }
-  15%  { left: 15%;   opacity: 0; }
-  25%  { left: 50%;   opacity: 1; color: var(--dark-brown); }
-  50%  { left: 50%;   opacity: 0; }
-  75%  { left: 100%;  opacity: 1; color: var(--light-brown); }
-  100% { left: 100%;  opacity: 0; }
-}
-
-/* 8. Cada pata */
-#page-loader .left-paw {
-  animation: move-left-paw 3.2s ease infinite;
-  transform: rotate(75deg);
-}
-
-#page-loader .right-paw {
-  top: 20px;
-  animation: move-right-paw 3.2s ease infinite;
-  transform: rotate(100deg);
+/* Animación */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
 }
