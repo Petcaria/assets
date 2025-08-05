@@ -1,12 +1,3 @@
-/* ————————————————————————————————
-   Ajustes para la página de Search
-   ———————————————————————————————— */
-
-/* 1. Empujar todo el contenido bajo el header fijo */
-body {
-  padding-top: 4.5rem;
-}
-
 /* 2. Estilo idéntico al buscador del index */
 .search-main {
   background: var(--background-alt);
