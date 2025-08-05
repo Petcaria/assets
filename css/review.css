@@ -1,0 +1,86 @@
+/* review.css */
+
+/* Contenedor principal */
+.review-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Título */
+.review-container h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* Card de cada cita */
+.review-card {
+  border: 1px solid #e0e0e0;
+  border-radius: .5rem;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  background: #fafafa;
+  box-shadow: 0 2px 4px rgba(0,0,0,.05);
+}
+
+/* Datos del especialista */
+.review-card .info {
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+.review-card .info strong {
+  color: #555;
+}
+
+/* Formulario de reseña */
+.review-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+/* Rating + comentario */
+.review-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: .25rem;
+  color: #333;
+}
+
+/* Select y textarea */
+.review-form select,
+.review-form textarea {
+  width: 100%;
+  padding: .5rem;
+  border: 1px solid #ccc;
+  border-radius: .375rem;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+/* Botón enviar */
+.review-form button {
+  justify-self: start;
+  padding: .75rem 1.5rem;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: .375rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color .2s;
+}
+.review-form button:hover {
+  background-color: #218838;
+}
+
+/* Mensaje de “¡Gracias por tu reseña!” */
+.review-container .done {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  padding: 1rem;
+  border-radius: .375rem;
+  margin-bottom: 1.5rem;
+}
