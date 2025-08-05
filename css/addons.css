@@ -19,3 +19,9 @@
   display: inline-block;
   margin: 0 auto;
 }
+    
+/* esconder solo reales */   
+#grid-destacados .real-card { display: none; }
+/* example y placeholder siempre block por defecto */
+#grid-destacados .example-card,
+#placeholder-no-cerca { display: block; }
