@@ -1,0 +1,99 @@
+/* assets/css/appointments.css */
+
+:root {
+  --primary: #17B26A;
+  --primary-dark: #149655;
+  --primary-light: rgba(23, 178, 106, 0.1);
+  --background: #FFFFFF;
+  --background-alt: #F8FAFC;
+  --text: #1A2942;
+  --text-light: #4A5567;
+  --border: #E5E7EB;
+  --shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+}
+
+/* Contenedor principal */
+.appointments-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: var(--background-alt);
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.appointments-container h2 {
+  text-align: center;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+}
+
+/* Mensaje sin citas */
+.no-appointments {
+  text-align: center;
+  color: var(--text-light);
+  font-size: 1rem;
+  padding: 2rem 0;
+}
+
+/* Tabla de citas */
+.appointments-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.appointments-table th,
+.appointments-table td {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  text-align: left;
+  vertical-align: middle;
+}
+
+.appointments-table th {
+  background: var(--primary-light);
+  color: var(--text);
+  font-weight: 600;
+}
+
+.appointments-table tbody tr:nth-child(even) {
+  background: var(--background);
+}
+
+/* Enlaces y botones */
+.appointments-link {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color .2s;
+}
+.appointments-link:hover {
+  color: var(--primary-dark);
+}
+
+.appointments-button {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: background .2s, transform .2s;
+}
+.appointments-button:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+/* Estados */
+.status-pendiente { color: var(--text-light); }
+.status-confirmada { color: var(--primary); font-weight: 500; }
+.status-cancelada { color: #e53e3e; }
+.status-available { color: var(--text-light); }
+
+/* Ubicación no disponible */
+.no-location {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
