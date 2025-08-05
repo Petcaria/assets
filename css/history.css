@@ -1,0 +1,21 @@
+.history-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+@media (min-width: 768px) {
+  .history-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.history-card {
+  background: #fafafa;
+  border: 1px solid #e0e0e0;
+  border-radius: .5rem;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,.05);
+}
+.history-card .notes {
+  margin-top: .5rem;
+  font-style: italic;
+}
