@@ -171,3 +171,16 @@
   margin-right: 0.5rem;
   vertical-align: middle;
 }
+
+.login-footer {
+  text-align: center;
+  margin-top: 1rem;
+}
+.forgot-link {
+  color: #666;
+  font-size: 0.9rem;
+  text-decoration: underline;
+}
+.forgot-link:hover {
+  color: #333;
+}
