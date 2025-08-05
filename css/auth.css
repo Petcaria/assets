@@ -93,3 +93,81 @@
   background: var(--primary-dark);
   transform: translateY(-1px);
 }
+
+/* Contenedor general centrado */
+.login-container {
+  max-width: 380px;      /* Ancho máximo del formulario */
+  margin: 3rem auto;     /* Centrado horizontal y separación vertical */
+  padding: 2rem;         /* Espacio interno */
+  background: #fff;      /* Fondo blanco */
+  border-radius: 8px;    /* Esquinas redondeadas */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* Sombra sutil */
+}
+
+/* Título centrado y con espacio abajo */
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Inputs y botón de submit ocupando 100% */
+.login-form input,
+.login-form button {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}
+
+/* Botón Entrar */
+.login-form button {
+  background: #2bb673;
+  color: #fff;
+  border: none;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Contenedor de botones sociales */
+.social-login {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;    /* Espacio uniforme entre botones */
+  margin-top: 1rem;
+}
+
+/* Botones sociales a bloque */
+.social-login .btn {
+  display: block;
+  width: 100%;
+  padding: 0.65rem;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border-radius: 4px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* Facebook */
+.btn-facebook {
+  background-color: #1877F2;
+  color: #fff;
+}
+
+/* Google */
+.btn-google {
+  background-color: #fff;
+  color: #444;
+  border: 1px solid #ddd;
+}
+
+/* Iconos dentro de botones sociales */
+.social-login .btn img {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
