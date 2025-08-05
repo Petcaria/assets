@@ -1,0 +1,105 @@
+/* schedule.css */
+
+/* Formulario de cita: 1 columna en móvil, 2 columnas en tablet-up */
+.appointment-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* Dos columnas a partir de 768px */
+@media (min-width: 768px) {
+  .appointment-form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tres columnas a partir de 1200px (solo para filas sencillas) */
+@media (min-width: 1200px) {
+  .appointment-form {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  /* Pero que los campos de texto largos ocupen 2 columnas */
+  .appointment-form textarea[name="motivo"],
+  .appointment-form textarea[name="comentarios"] {
+    grid-column: span 2;
+  }
+  /* El botón y cancelar ocupan las 3 columnas */
+  .appointment-form .btn-primary,
+  .appointment-form a.btn-secondary {
+    grid-column: span 3;
+  }
+}
+
+/* Etiquetas encima de inputs */
+.appointment-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: .25rem;
+}
+
+/* Inputs, selects y textareas */
+.appointment-form input,
+.appointment-form select,
+.appointment-form textarea {
+  width: 100%;
+  padding: .5rem;
+  border: 1px solid #ccc;
+  border-radius: .375rem;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+/* Precio readonly */
+.readonly-input {
+  background-color: #f9f9f9;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Botón principal */
+.appointment-form .btn-primary {
+  padding: .75rem;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: .375rem;
+  cursor: pointer;
+  transition: background-color .2s;
+}
+
+.appointment-form .btn-primary:hover {
+  background-color: #218838;
+}
+
+/* Enlace de cancelar */
+.appointment-form a.btn-secondary {
+  display: inline-block;
+  margin-top: .5rem;
+  color: #6c757d;
+  text-decoration: none;
+}
+
+.appointment-form a.btn-secondary:hover {
+  text-decoration: underline;
+}
+
+/* Mensajes */
+.form-error, .form-success {
+  padding: .75rem;
+  border-radius: .375rem;
+  font-weight: 600;
+}
+
+.form-error {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.form-success {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
