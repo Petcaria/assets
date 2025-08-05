@@ -1,0 +1,21 @@
+/* Centrar la sección “¿Eres especialista veterinario?” */
+.specialist-cta {
+  text-align: center;
+  padding: 3rem 1rem; /* opcional: más espacio arriba/abajo */
+}
+
+.specialist-cta .container {
+  display: inline-block;
+  max-width: 600px; /* ajusta al ancho que prefieras */
+  width: 100%;
+}
+
+.specialist-cta h2,
+.specialist-cta p {
+  margin: 0 auto 1rem;
+}
+
+.specialist-cta .btn-registro {
+  display: inline-block;
+  margin: 0 auto;
+}
