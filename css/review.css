@@ -84,3 +84,52 @@
   border-radius: .375rem;
   margin-bottom: 1.5rem;
 }
+
+
+        .star-rating {
+            display: flex;
+            gap: 5px;
+            margin: 10px 0;
+        }
+        
+        .star {
+            font-size: 24px;
+            color: #ddd;
+            cursor: pointer;
+            transition: color 0.2s ease;
+            user-select: none;
+        }
+        
+        .star:hover,
+        .star.active {
+            color: #ffc107;
+        }
+        
+        .star:hover ~ .star {
+            color: #ddd;
+        }
+        
+        .rating-label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+        
+        .rating-text {
+            margin-top: 5px;
+            font-size: 14px;
+            color: #666;
+            min-height: 20px;
+        }
+        
+        .review-form {
+            margin-top: 15px;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .hidden-rating {
+            display: none;
+        }
