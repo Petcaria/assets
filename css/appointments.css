@@ -198,3 +198,37 @@
     font-size: 0.85rem;
   }
 }
+
+.ticket-status {
+    font-size: 0.8em;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.ticket-status.status-active {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.ticket-status.status-pending {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.ticket-status.status-completed {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+.no-ticket {
+    color: #6b7280;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .appointments-table th:nth-child(5),
+    .appointments-table td:nth-child(5) {
+        display: table-cell;
+    }
+}
