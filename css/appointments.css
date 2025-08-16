@@ -97,3 +97,104 @@
   color: var(--text-light);
   font-size: 0.9rem;
 }
+
+/* ESTILOS RESPONSIVOS PARA MÓVILES */
+@media (max-width: 768px) {
+  .appointments-container {
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+  
+  .appointments-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Ocultar la tabla tradicional en móviles */
+  .appointments-table,
+  .appointments-table thead,
+  .appointments-table tbody,
+  .appointments-table th,
+  .appointments-table td,
+  .appointments-table tr {
+    display: block;
+  }
+  
+  /* Ocultar el encabezado de la tabla */
+  .appointments-table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  
+  /* Estilo de tarjetas para cada cita */
+  .appointments-table tr {
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .appointments-table td {
+    border: none;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    padding: 0.5rem 0;
+    padding-left: 40%;
+    text-align: right;
+  }
+  
+  .appointments-table td:last-child {
+    border-bottom: none;
+  }
+  
+  /* Etiquetas para cada campo */
+  .appointments-table td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 35%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: 600;
+    color: var(--text);
+    text-align: left;
+  }
+  
+  /* Ajustar botones y enlaces en móviles */
+  .appointments-button {
+    display: block;
+    text-align: center;
+    margin-top: 0.5rem;
+    width: 100%;
+  }
+  
+  .appointments-link {
+    display: block;
+    margin-top: 0.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .appointments-container {
+    margin: 0.5rem;
+    padding: 0.75rem;
+  }
+  
+  .appointments-container h2 {
+    font-size: 1.25rem;
+  }
+  
+  .appointments-table td {
+    padding-left: 45%;
+    font-size: 0.9rem;
+  }
+  
+  .appointments-table td:before {
+    width: 40%;
+    font-size: 0.85rem;
+  }
+}
